@@ -41,19 +41,25 @@ class LoginViewController: UIViewController {
         
         if(email == "admin" && pwd == "admin@123"){
             print("Login Successfully")
+            if (rememberSwitch.isOn == true){
            
             userDefault.set(email, forKey: "userEmail")
             userDefault.set(pwd, forKey: "userPassword")
+                let sb = UIStoryboard.init(name: "Main", bundle: nil)
+                let rootVC = sb.instantiateViewController(withIdentifier: "StudentEntry")
+                navigationController?.pushViewController(rootVC, animated: true)
         }
         else{
-            print("login Unsuccessful")
-            let alert = UIAlertController.init(title: "Unsuccessfull", message: "Username Password Wrong", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retype", style: UIAlertAction.Style.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
-            userDefault.removeObject(forKey: "userEmail")
-            userDefault.removeObject(forKey: "userPassword")
+                print("Remove UserId/Password if previously remembered/stored")
+                userDefault.removeObject(forKey: "userEmail")
+                userDefault.removeObject(forKey: "userPassword")
         }
+            
+            let sb = UIStoryboard.init(name: "Main", bundle: nil)
+            let studentEntry = sb.instantiateViewController(withIdentifier: "StudentEntry")
+           navigationController?.pushViewController(studentEntry, animated: true)
         
     }
 }
 
+}

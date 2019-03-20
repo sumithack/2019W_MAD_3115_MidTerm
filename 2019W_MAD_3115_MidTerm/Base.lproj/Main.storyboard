@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,8 +41,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="heE-LX-mR5"/>
-                                    <segue destination="BVR-6O-671" kind="show" id="Hxk-rz-gEQ"/>
+                                    <action selector="btnLoginClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ccu-Ko-vbV"/>
+                                    <segue destination="BVR-6O-671" kind="show" id="Coh-GF-f8t"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember Me!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-3Y-MyN">
@@ -57,19 +57,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="rememberSwitch" destination="fuk-zx-rrZ" id="nXF-DZ-J0s"/>
-                        <outlet property="txtPassword" destination="kv5-JZ-kpn" id="ejP-lk-728"/>
-                        <outlet property="txtUsername" destination="h0i-Xy-rzr" id="jP8-sC-NCH"/>
+                        <outlet property="rememberSwitch" destination="fuk-zx-rrZ" id="IXJ-EL-7eF"/>
+                        <outlet property="txtPassword" destination="kv5-JZ-kpn" id="l55-6q-v6E"/>
+                        <outlet property="txtUsername" destination="h0i-Xy-rzr" id="gWq-9b-Yb5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="133.5832083958021"/>
+            <point key="canvasLocation" x="113" y="134"/>
         </scene>
-        <!--View Controller-->
+        <!--Student Entry View Controller-->
         <scene sceneID="v7k-2h-1eR">
             <objects>
-                <viewController id="BVR-6O-671" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StudentEntry" id="BVR-6O-671" customClass="StudentEntryViewController" customModule="_019W_MAD_3115_MidTerm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wcK-8I-WuR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
