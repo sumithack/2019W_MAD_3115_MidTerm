@@ -12,19 +12,17 @@ class StudentEntryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+self.navigationItem.hidesBackButton = true
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(movetoLogin))
         // Do any additional setup after loading the view.
+    }
+    @objc func movetoLogin(){
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let loginVC = sb.instantiateViewController(withIdentifier: "Login")
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+  
 
 }
