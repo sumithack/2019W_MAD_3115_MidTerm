@@ -9,7 +9,7 @@
 import UIKit
 
 class StudentEntryViewController: UIViewController, UIPickerViewDelegate,UIPickerViewDataSource {
-    @IBOutlet weak var datePicker: UIDatePicker!
+   
     @IBOutlet weak var stdEmail: UITextField!
     @IBOutlet weak var stdGender: UITextField!
     @IBOutlet weak var stdId: UITextField!
@@ -22,7 +22,6 @@ class StudentEntryViewController: UIViewController, UIPickerViewDelegate,UIPicke
 
     override func viewDidLoad() {
         super.viewDidLoad()
-         bdate.inputView = self.datePicker;
         self.navigationItem.hidesBackButton = true
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Logout", style: .plain, target: self, action: #selector(movetoLogin))
         // Do any additional setup after loading the view.

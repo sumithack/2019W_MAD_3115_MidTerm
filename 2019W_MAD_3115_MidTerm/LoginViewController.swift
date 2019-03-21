@@ -45,21 +45,24 @@ class LoginViewController: UIViewController {
            
             userDefault.set(email, forKey: "userEmail")
             userDefault.set(pwd, forKey: "userPassword")
-                let sb = UIStoryboard.init(name: "Main", bundle: nil)
-                let rootVC = sb.instantiateViewController(withIdentifier: "StudentEntry") as! StudentEntryViewController
-                navigationController?.pushViewController(rootVC, animated: true)
+                
         }
         else{
                 userDefault.removeObject(forKey: "userEmail")
                 userDefault.removeObject(forKey: "userPassword")
             print("login Unsuccessful")
-            let alert = UIAlertController(title: "Unsuccessfull", message: "Username Password Wrong", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Retype", style: UIAlertAction.Style.default, handler: nil))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
            
         }
-        
-    }
+            let sb = UIStoryboard.init(name: "Main", bundle: nil)
+            let rootVC = sb.instantiateViewController(withIdentifier: "StudentEntry") as! StudentEntryViewController
+            navigationController?.pushViewController(rootVC, animated: true)
+        }
+        else
+        {
+        let alert = UIAlertController(title: "Error", message: "Name must be: lowercase", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        self.present(alert,animated: true)
 }
 
+}
 }
