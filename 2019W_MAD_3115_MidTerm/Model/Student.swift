@@ -9,7 +9,7 @@
 import Foundation
 
 struct Student{
-    var Student_id: Int
+    var Student_id: String
     var Student_name: String
     var Gender: String
     var Course_Name: String

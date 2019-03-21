@@ -120,17 +120,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b50-b2-vWy">
+                                <rect key="frame" x="138" y="486" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="btnSubmit:" destination="BVR-6O-671" eventType="touchUpInside" id="fNe-By-td0"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="QNL-Pm-YEr">
+                                <rect key="frame" x="51" y="524" width="257" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="574822502.99281597">
+                                    <!--2019-03-21 00:55:02 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="sMZ-Oy-BkE"/>
                     </view>
                     <connections>
+                        <outlet property="bdate" destination="0Ns-DP-765" id="UJR-Fz-7ON"/>
+                        <outlet property="datePicker" destination="QNL-Pm-YEr" id="SWq-9s-dwd"/>
                         <outlet property="pickerView" destination="4KC-Nw-X43" id="Lgc-DP-Dka"/>
+                        <outlet property="stdEmail" destination="VKB-85-JqI" id="ULS-Uh-Gbd"/>
+                        <outlet property="stdGender" destination="eZu-sB-bQN" id="lFW-4a-BBg"/>
+                        <outlet property="stdId" destination="Uyj-d9-KMa" id="d1g-MZ-ZzF"/>
+                        <outlet property="stdName" destination="f6j-0H-AMf" id="zCt-Bw-sIT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yc5-zS-RHh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="900" y="146.17691154422789"/>
+            <point key="canvasLocation" x="773.60000000000002" y="108.39580209895054"/>
         </scene>
     </scenes>
 </document>
